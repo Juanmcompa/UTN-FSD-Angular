@@ -1,0 +1,12 @@
+<nav>
+    <button *ngIf="isLogin" mat-button [matMenuTriggerFor]="menu"><mat-icon>dialpad</mat-icon>
+        </button>
+    <mat-menu  #menu="matMenu">
+      <button mat-menu-item routerLink="/">Ver productos</button>
+      <button *ngIf="isLogin" mat-menu-item (click)="logout()">Salir</button>
+    </mat-menu>
+    <button  mat-button routerLink="/">Inicio</button>
+    <button *ngIf="!isLogin" mat-button routerLink="/ingresar">Ingresar</button>
+    <button *ngIf="!isLogin" mat-button routerLink="/registrarse">Registrarse</button>
+    
+</nav>

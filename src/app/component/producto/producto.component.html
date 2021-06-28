@@ -1,0 +1,90 @@
+<!--<div *ngIf="data.length!={}">
+    <p>{{data.name | uppercase }}</p>
+    <p>{{data.price | currency}}</p>
+    <button mat-button color="accent" routerLink="detalle/{{data.id}}" *ngIf="!detalle">Ver Detalle</button>
+    <div class="example-button-container" (click)="eliminar()" *ngIf="!detalle">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    <p *ngIf="detalle">{{data.description}}</p>
+    <img  *ngIf="detalle" src="{{data.photo_url}}" alt="{{data.name | lowercase}}">
+</div>-->
+<!--
+<mat-card class="example-card center_all item" *ngIf="data.length!={}">
+  
+    <div *ngIf="!detalle" class="imagen_prod" style="background-image: url('{{data.photo_url}}')"></div>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" style="background-image: url('{{data.photo_url}}')"></div>
+      <mat-card-title>{{data.name | uppercase }}</mat-card-title>
+      <mat-card-subtitle>{{data.price | currency}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="detalle" src="{{data.photo_url}}" alt="{{data.name | lowercase}}">
+
+    <mat-card-content>
+      <p *ngIf="detalle">{{data.description}}</p>
+      
+      
+      
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="accent" routerLink="detalle/{{data.id}}" *ngIf="!detalle">Ver Detalle</button>
+        <div class="example-button-container" (click)="eliminar()" *ngIf="!detalle">
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+    </mat-card-actions>
+  </mat-card>
+  -->
+
+  <mat-card class="example-card center_all item" *ngIf="data.length!={}">
+    <div class="wrapper">
+      <div class="one" *ngIf="detalle" style="background-image: url('{{data.photo_url}}')">
+      </div>
+      <div class="details">
+      <div class="two">
+        <mat-card-header>
+          <div mat-card-avatar *ngIf="!detalle" class="avatar" style="background-image: url('{{data.photo_url}}')"></div>
+          <mat-card-title><p class="prod_title">{{data.name | uppercase }}</p></mat-card-title>
+          <mat-card-subtitle><p><span class="prod_price">{{data.price | currency}}</span>&nbsp;<span class="prod_sale"><strong>{{data.wholesale_price | currency}}</strong></span></p></mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <div class="detalles" *ngIf="detalle">
+          <p class="desc">{{data.description}}</p>
+          <div class="mt-15">
+             <p class="stock">STOCK: {{data.stock}}</p>
+             <p class="sales">{{data.sales}} Vendidos</p>
+             <p class="dare_upd">Actualizado al{{data.date_upd}}</p>
+             <p class="bra_ite_fk">Código de producto:{{data.bra_ite_fk}}</p>
+          </div>
+        </div>
+        </mat-card-content>
+      </div>
+      <div class="three">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" *ngIf="!detalle">
+          <mat-button-toggle class="warn" routerLink="detalle/{{data.id}}" value="bold">Ver Detalle&nbsp;<mat-icon aria-hidden="false" aria-label="Ver Detalle">search</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle (click)="eliminar()" value="italic"><mat-icon aria-hidden="false" aria-label="Ignorar">visibility_off</mat-icon></mat-button-toggle>
+          <mat-button-toggle class="accent" value="underline"><mat-icon aria-hidden="false" aria-label="Agregar al carrito">add_shopping_cart</mat-icon></mat-button-toggle>
+          <mat-button-toggle class="accent" value="underline"><mat-icon aria-hidden="false" aria-label="Consultar envío">local_shipping</mat-icon></mat-button-toggle>
+        </mat-button-toggle-group>
+        <!--
+          <button mat-button color="warn" class="warn" routerLink="detalle/{{data.id}}" *ngIf="!detalle">Ver Detalle</button>
+          <button mat-button color="accent" class="accent" (click)="eliminar()" *ngIf="!detalle">Ignorar</button>
+        -->
+        <button mat-button color="warn" class="warn" *ngIf="detalle">Comprar Ahora</button>
+        <button mat-button color="accent" class="accent" *ngIf="detalle">Agregar al carrito</button>
+        <mat-button-toggle-group class="mt-15" name="fontStyle" aria-label="Font Style" *ngIf="detalle">
+          <mat-button-toggle (click)="eliminar()" value="italic"><mat-icon aria-hidden="false" aria-label="Ignorar">visibility_off</mat-icon></mat-button-toggle>
+          <mat-button-toggle class="accent" value="underline"><mat-icon aria-hidden="false" aria-label="Consultar envío">local_shipping</mat-icon></mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    </div>
+  </mat-card>
+
+
+  
+  

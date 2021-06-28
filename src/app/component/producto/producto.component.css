@@ -1,0 +1,122 @@
+.mat-card {
+  width: max-content;
+  max-width: 100%;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  border-top: #fff159 3px solid;
+}
+.mat-card-content {
+  margin-bottom: 0px;
+}
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.details{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.avatar{
+  height: 100px;
+  width: 100px;
+}
+.one {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  min-height: 400px;
+  padding: 20px;
+}
+.two {
+  /*box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;*/
+  max-width: 300px;
+  padding: 6px;
+}
+.three {
+  padding: 0px;
+  width: 100%;
+}
+.avatar {
+  background-size: cover;
+  background-position:center;
+}
+
+.prod_title {
+  color: grey;
+}
+.prod_price {
+  color: rgb(133, 18, 18);
+  text-decoration: line-through;
+  font-size: 0.6rem;
+}
+.prod_sale {
+  color: rgb(117, 180, 22);
+  font-size: 1.2rem;
+}
+.detalles {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: darkgray;
+  margin-top: 10px;
+}
+.detalles p{
+  margin: 0px;
+}
+.desc {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: black;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+button {
+  width: 100%;
+  margin-top: 5px;
+}
+.warn {
+  background-color: rgb(71, 71, 251);
+  color: white;
+  transition: all 1s;
+}
+.warn:hover {
+  background-color: rgb(56, 56, 202);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.accent {
+  background-color: darkgray;
+  color: black;
+  transition: all 1s;
+}
+.accent:hover {
+  background-color: rgb(143, 143, 143);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.mat-button-toggle {
+  width: 100%;
+}
+.mat-button-toggle-button {
+  width: 100%;
+}
+.mat-button-toggle-group-appearance-standard {
+  width: 100%;
+}
